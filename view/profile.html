@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+<!-- 'layout.html' 템플릿 확장-->
+
+{% block content %}
+<!-- 'content' 블록시작, 여기서 본문 콘텐츠 정의-->
+    <div class="timeline">
+        <div class="followings half">
+            <h2>팔로잉 목록</h2>
+            <!--유저의 팔로잉 목록이 있는지 확인-->
+            {% if user.Following in user.Followings %}
+                <!--각 팔로잉 유저의 닉네임을 출력-->
+                <div>{{Following.nick}}</div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <div class="followers half">
+            <h2>팔로워 목록</h2>
+            <!--유저의 팔로워 목록이 있는지 확인-->
+            {% if user.Follower in user.Followers %}
+                <!--각 팔로워 유저의 닉네임을 출력-->
+                <div>{{Follower.nick}}</div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    {% endblock %}

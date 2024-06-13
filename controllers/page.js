@@ -5,7 +5,7 @@ exports.renderProfile = (req, res) => {
 };
 
 // 회원 가입 페이지를 렌더링하는 함수 정의
-export.renderJoin = (req, res) => {
+exports.renderJoin = (req, res) => {
     // 'join' 템플릿 렌더링, 'title' 변수설정
     res.render('join', {title: '회원가입 - NodeBird'});
 };
